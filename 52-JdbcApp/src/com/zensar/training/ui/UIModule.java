@@ -2,7 +2,10 @@ package com.zensar.training.ui;
 
 import java.time.LocalDate;
 
+import com.zensar.training.bean.Employee;
 import com.zensar.training.bean.Gender;
+import com.zensar.training.service.EmployeeService;
+import com.zensar.training.service.EmployeeServiceImpl;
 
 public class UIModule {
 	private static void blankLines(int num) {
@@ -19,7 +22,26 @@ public class UIModule {
 		double salary=prompter.promptForDoubleInput("Enter Basic Salary");
 		Gender gender=prompter.promptForGenderInput("Enter Gender [1.MALE 2.FEMALE]");
 		
-		// more code here
+		Employee employee=new Employee();
+		employee.setName(name);
+		employee.setGrade(grade);
+		employee.setHiredDate(hiredDate);
+		employee.setBasicSalary(salary);
+		employee.setGender(gender);
+		
+		EmployeeService employeeService=new EmployeeServiceImpl();
+		try {
+			boolean result=employeeService.addEmployee(employee);
+			if(result==true)
+				System.out.println("\t\t Added Successfully");
+			else
+				System.out.println("Not Added");
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public static void updateInfo() {
