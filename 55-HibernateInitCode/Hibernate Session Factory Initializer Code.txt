@@ -1,6 +1,0 @@
-		ServiceRegistry registry;
-		SessionFactory sessionFactory;
-		registry = new StandardServiceRegistryBuilder().configure().build();
-		MetadataSources metaSources = new MetadataSources(registry);
-		Metadata metaData = metaSources.getMetadataBuilder().build();
-		sessionFactory = metaData.getSessionFactoryBuilder().build();
