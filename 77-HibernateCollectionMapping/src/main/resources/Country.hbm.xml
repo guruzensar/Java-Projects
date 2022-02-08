@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.jboss.org/dtd/hibernate/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.zensar.training.bean.pack2.Country"
+		table="COUNTRIES">
+
+		<id name="countryId" column="COUNT_ID">
+			<generator class="increment" />
+		</id>
+		
+		<property name="countryName"></property>
+		<set name="cityNames" table="COUNTRY_CITY_NAMES">
+			<key column="C_ID"></key>
+			<element column="CITY_NAME" type="string"></element>
+		</set>
+
+	</class>
+
+</hibernate-mapping>

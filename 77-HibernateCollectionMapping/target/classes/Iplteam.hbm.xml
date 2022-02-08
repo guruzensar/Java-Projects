@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.jboss.org/dtd/hibernate/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.zensar.training.bean.pack5.IPLTeam"
+		table="IPLTEAMS">
+
+		<id name="id" column="TEAM_ID">
+			<generator class="native" />
+		</id>
+		
+		<property name="name"></property>
+		<property name="region"></property>
+		
+		<set name="players" table="IPLTEAM_PLAYERS">
+			<key column="id"></key>
+			
+			<composite-element class="com.zensar.training.bean.pack5.Player">
+				<property name="playerName"></property>
+				<property name="typeOfPlayer"></property>
+				<property name="age"></property>
+				
+			</composite-element>
+		</set>
+
+	</class>
+
+</hibernate-mapping>
