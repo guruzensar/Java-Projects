@@ -4,29 +4,6 @@
 
 <hibernate-mapping>
 
-	<class name="com.zensar.training.bean.pack3.Department"
-		table="DEPARTMENTS">
-
-		<id name="departmentId" column="DEPT_ID">
-			<generator class="increment" />
-		</id>
-		
-		<property name="departmentName"></property>
-		<list name="employees" table="DEPARTMENT_EMPS">
-			<key column="DEPT_ID"></key>
-			<list-index column="idx"></list-index>
-			<composite-element class="com.zensar.training.bean.pack3.Employee">
-				<property name="employeeName"></property>
-				<property name="grade"></property>
-				<property name="gender">
-					<type name="org.hibernate.type.EnumType">
-						<param name="enumClass">com.zensar.training.bean.pack3.Gender</param>
-						<param name="useNamed">true</param>
-					</type>
-				</property>
-			</composite-element>
-		</list>
-
-	</class>
+	
 
 </hibernate-mapping>

@@ -15,9 +15,7 @@ import com.zensar.training.util.HibernateUtil;
 public class Main2 {
 
 	private static void insertTesting() {
-		HibernateUtil.init();
-		Session session=HibernateUtil.getSession();
-		Transaction tx=session.beginTransaction();
+		
 		
 		Country country=new Country();
 		country.setCountryName("INDIA");
@@ -27,8 +25,7 @@ public class Main2 {
 		cityNames.add("Chennai");
 		
 		
-		tx.commit();
-		HibernateUtil.cleanUp();
+	
 		
 		System.out.println("\t\t !>>>>>>>>>>> Country Data Saved <<<<<<<<<<<<<<!");
 	}

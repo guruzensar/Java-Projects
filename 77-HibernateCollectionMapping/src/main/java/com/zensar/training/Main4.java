@@ -15,10 +15,7 @@ import com.zensar.training.util.HibernateUtil;
 public class Main4 {
 
 	private static void insertTesting() {
-		HibernateUtil.init();
-		Session session=HibernateUtil.getSession();
-		Transaction tx=session.beginTransaction();
-		
+	
 		TeamMember teamMember=new TeamMember("Dinesh");
 		
 		Map<String, Integer> skillMap=new TreeMap<>();
@@ -27,9 +24,7 @@ public class Main4 {
 		
 		teamMember.setSkillDetails(skillMap);
 		
-		session.save(teamMember);
-		tx.commit();
-		HibernateUtil.cleanUp();
+		
 	}
 
 	private static void loadTesting() {

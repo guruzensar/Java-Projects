@@ -3,9 +3,26 @@ package com.zensar.training.bean.pack2;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+
+
 public class Country {
+	
+	
 	int countryId;
+	
+	
 	String countryName;
+	
+	
 	Set<String> cityNames;
 
 	private void init() {

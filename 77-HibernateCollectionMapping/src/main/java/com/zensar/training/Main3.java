@@ -14,9 +14,6 @@ import com.zensar.training.util.HibernateUtil;
 public class Main3 {
 
 	private static void insertTesting() {
-		HibernateUtil.init();
-		Session session=HibernateUtil.getSession();
-		Transaction tx=session.beginTransaction();
 		
 		Department department=new Department(101, "HR");
 		department.addEmployee(new Employee("Rashmi", 'A', Gender.FEMALE));
@@ -24,10 +21,6 @@ public class Main3 {
 		department.addEmployee(new Employee("Udhay", 'A', Gender.MALE));
 		
 		
-		session.save(department);
-		
-		tx.commit();
-		HibernateUtil.cleanUp();
 		
 		System.out.println("\t\t !>>>>>>>>>>> Department Saved <<<<<<<<<<<<<<!");
 	}

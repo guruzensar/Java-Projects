@@ -3,9 +3,23 @@ package com.zensar.training.bean.pack1;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
+
+
 public class Product {
+	
+
 	int productId;
 	String productName;
+	
+	
 	List<Double> plannedOffersPrices;
 	
 	private void init() {
@@ -44,7 +58,12 @@ public class Product {
 		this.plannedOffersPrices = plannedOffersPrices;
 	}
 
+	
 
+	public Product(String productName) {
+		super();
+		this.productName = productName;
+	}
 
 	public int getProductId() {
 		return productId;

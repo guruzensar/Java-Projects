@@ -1,14 +1,27 @@
-package com.zensar.training.bean.pack5;
+package com.zensar.training.bean.pack4;
 
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
 public class IPLTeam {
+	
+	
 	private int id;
 	private String name;
 	private String region;
+	
+
 	Set<Player> players;
+	
 	public IPLTeam(int id, String name, String region) {
 		super();
 		this.id = id;

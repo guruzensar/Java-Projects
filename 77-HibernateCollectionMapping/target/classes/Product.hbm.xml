@@ -4,20 +4,6 @@
 
 <hibernate-mapping>
 
-	<class name="com.zensar.training.bean.pack1.Product"
-		table="Products">
-
-		<id name="productId" column="PROD_ID">
-			<generator class="native" />
-		</id>
-		
-		<property name="productName"></property>
-		<list name="plannedOffersPrices" table="PROD_OFFERS">
-			<key column="PRD_ID"></key>
-			<list-index column="idx"></list-index>
-			<element column="OFFER_PRICE" type="double"></element>
-		</list>
-
-	</class>
+	
 
 </hibernate-mapping>

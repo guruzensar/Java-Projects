@@ -1,5 +1,8 @@
 package com.zensar.training.bean.pack6;
 
+import javax.persistence.Embeddable;
+
+
 public class Customer {
 	private String name;
 	private String city;

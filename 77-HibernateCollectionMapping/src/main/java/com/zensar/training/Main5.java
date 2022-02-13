@@ -16,9 +16,7 @@ import com.zensar.training.util.HibernateUtil;
 public class Main5 {
 
 	private static void insertTesting() {
-		HibernateUtil.init();
-		Session session=HibernateUtil.getSession();
-		Transaction tx=session.beginTransaction();
+		
 		IPLTeam iplTeam=new IPLTeam("Kolkata Knight Riders", "Kolkata", null);
 		Player player1=new Player("Dinesh Karthick", "Wicket Keeper", 28);
 		Player player2=new Player("Venkatesh Iyer","All rounder", 26);
@@ -27,10 +25,7 @@ public class Main5 {
 		players.add(player2);
 		iplTeam.setPlayers(players);
 		
-		session.save(iplTeam);
 		
-		tx.commit();
-		HibernateUtil.cleanUp();
 	}
 
 	private static void loadTesting() {

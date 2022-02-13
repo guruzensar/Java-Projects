@@ -1,12 +1,27 @@
-package com.zensar.training.bean.pack4;
+package com.zensar.training.bean.pack5;
 
 import java.util.Map;
 import java.util.TreeMap;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.MapKey;
+import javax.persistence.MapKeyColumn;
+
+
 public class TeamMember {
 
+	
 	private int memberId;
 	private String memberName;
+	
+	
 	private Map<String, Integer> skillDetails;
 	
 	private void initSkillDetails() {

@@ -3,9 +3,23 @@ package com.zensar.training.bean.pack3;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
+
+
 public class Department {
+	
+	
 	private int departmentId;
 	private String departmentName;
+	
+
 	private List<Employee> employees;
 	
 	private void init() {
@@ -38,6 +52,14 @@ public class Department {
 		this.departmentId = departmentId;
 		this.departmentName = departmentName;
 		this.employees = employees;
+	}
+	
+	
+
+	public Department(String departmentName) {
+		super();
+		this.departmentName = departmentName;
+		init();
 	}
 
 	public int getDepartmentId() {

@@ -1,9 +1,17 @@
 package com.zensar.training.bean.pack3;
 
+import javax.persistence.Embeddable;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+
 public class Employee {
+	
 	
 	private String employeeName;
 	private char grade;
+	
+	
 	private Gender gender;
 	
 	

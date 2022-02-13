@@ -15,9 +15,6 @@ import com.zensar.training.util.HibernateUtil;
 public class Main1 {
 
 	private static void insertTesting() {
-		HibernateUtil.init();
-		Session session=HibernateUtil.getSession();
-		Transaction tx=session.beginTransaction();
 		
 		Product product=new Product(115, "Park Avenue");
 		List<Double> plannedOfferPrices=new LinkedList<Double>();
@@ -27,8 +24,7 @@ public class Main1 {
 
 		
 		
-		tx.commit();
-		HibernateUtil.cleanUp();
+	
 		
 		
 		System.out.println("\t\t !>>>>>>>>>>> Product Saved <<<<<<<<<<<<<<!");

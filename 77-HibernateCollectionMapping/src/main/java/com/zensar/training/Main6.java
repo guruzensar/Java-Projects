@@ -16,10 +16,7 @@ import com.zensar.training.util.HibernateUtil;
 public class Main6 {
 
 	private static void insertTesting() {
-		HibernateUtil.init();
-		Session session=HibernateUtil.getSession();
-		Transaction tx=session.beginTransaction();
-	
+		
 		CustomerRating customerRating=new CustomerRating("Sridhar");
 		
 		
@@ -30,10 +27,7 @@ public class Main6 {
 		
 		customerRating.setCustomerRating(customerMap);
 		
-		session.save(customerRating);
 		
-		tx.commit();
-		HibernateUtil.cleanUp();
 	}
 
 	private static void loadTesting() {

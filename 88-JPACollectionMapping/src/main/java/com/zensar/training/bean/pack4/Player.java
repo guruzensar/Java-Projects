@@ -1,6 +1,9 @@
-package com.zensar.training.bean.pack5;
+package com.zensar.training.bean.pack4;
 
 import java.util.Objects;
+
+import javax.persistence.Embeddable;
+
 
 public class Player {
 	private String playerName;
